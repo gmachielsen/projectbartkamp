@@ -10,6 +10,7 @@
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Blind B & The Visionairs</title>
 
 
@@ -192,7 +193,20 @@ Blind B & The Visionairs would love to come and play!<br> We bring our own ampli
             <h2>+31 6 4643 3737</h2>
     </div>
 
-
+    <section id="float-back-to-top" class="py-3">
+                <!-- <div class="container">
+                    <div class="row"> -->
+                        <div class="col-md-12 text-right">
+                            <a href="#" id="scroll">
+                                <span>
+                                    <i class="fas fa-arrow-circle-up fa-3x mb-2"></i>
+                                </span>
+                            </a>
+                        </div>
+                    <!-- </div>
+                </div> -->
+            </section>
+      <footer>
 
             <!--footer goes here-->
 
@@ -223,13 +237,44 @@ Blind B & The Visionairs would love to come and play!<br> We bring our own ampli
 
             </div>
 
-
-            <!-- <script type="text/javascript " src="https://code.jquery.com/jquery.min.js "></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script type="text/javascript " src="https://code.jquery.com/jquery.min.js "></script>
+            <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
             <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js "></script>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDHHyac2SiOYPNYxXMK7rqJjnB8nCaaxE&callback=initMap "></script> -->
             <!-- <script src="assets/js/script.js "></script>
             <script src="assets/js/map.js "></script>  -->
+<script>
+            $("#artconcept a").on('click', function(event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+    const hash = this.hash;
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800, function() {
+      window.location.hash = hash;
+    });
+  }
+});
+
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    $('#scroll').fadeIn();
+  }
+  else {
+    $('#scroll').fadeOut();
+  }
+});
+$('#scroll').click(function() {
+  $("html, body").animate({
+    scrollTop: 0
+  }, 600);
+  return false;
+});
+
+</script>
 </body>
 
 </html>

@@ -276,3 +276,14 @@
            height: 80%;
            filter: grayscale(100%);
        }
+
+
+
+       .fa-arrow-circle-up:before {
+           content: "\f0aa";
+           color: gainsboro;
+       }
+
+       .fa-arrow-circle-up:hover {
+           color:#b19b57;
+       }
